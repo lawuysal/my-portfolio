@@ -2,10 +2,10 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="w-[22rem] md:w-[50rem] text-lg text-wrap border  rounded-md"
+      className="w-[22rem] md:w-[50rem]  text-wrap border  rounded-md"
     >
-      <h4 className="border-b p-3 bg-primary/10">Features</h4>
-      <div className="p-4 flex flex-col justify-center gap-4">
+      <h4 className="border-b p-3 bg-primary/10 text-lg">Features</h4>
+      <div className="p-4 flex flex-col justify-center gap-4 mt-2">
         <ul className="list-disc list-inside space-y-3">
           <li>Server and database deployed on Azure</li>
           <li>Client deployed on Vercel</li>

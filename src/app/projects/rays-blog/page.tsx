@@ -5,6 +5,7 @@ import Disclaimer from "./components/Disclaimer";
 import Screenshots from "./components/Screenshots";
 import Title from "./components/Title";
 import Overview from "./components/Overview";
+import TechStack from "./components/TechStack";
 
 export default function page() {
   return (
@@ -18,6 +19,7 @@ export default function page() {
       <Overview />
       <Description />
       <Features />
+      <TechStack />
       <Screenshots />
     </main>
   );

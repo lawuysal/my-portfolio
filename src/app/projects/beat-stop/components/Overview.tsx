@@ -2,14 +2,14 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="w-[22rem] md:w-[50rem] text-lg text-wrap border  rounded-md"
+      className="w-[22rem] md:w-[50rem]  text-wrap border  rounded-md"
     >
-      <h4 className="border-b p-3 bg-primary/10">Overview </h4>
-      <div className="p-4 flex flex-col justify-center gap-4">
-        <ul className="grid grid-cols-2 gap-4 ">
+      <h4 className="border-b p-3 bg-primary/10 text-lg">Overview </h4>
+      <div className="p-4 flex flex-col justify-center gap-4 mt-2">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {overviews.map((overview) => (
             <li key={overview.title + overview.value + "overviewSection"}>
-              <div className="grid grid-cols-[2fr_1fr_8fr]">
+              <div className="grid grid-cols-[3fr_1fr_8fr]">
                 <p className="font-bold">{overview.title}</p>
                 <p className="justify-self-end">:</p>
                 <p className="ml-4">{overview.value}</p>

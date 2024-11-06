@@ -2,9 +2,9 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="w-[22rem] md:w-[50rem] text-wrap border  rounded-md"
+      className="w-[22rem] md:w-[50rem]  text-wrap border  rounded-md"
     >
-      <h4 className="border-b p-3 bg-primary/10 text-lg ">Overview </h4>
+      <h4 className="border-b p-3 bg-primary/10 text-lg">Overview </h4>
       <div className="p-4 flex flex-col justify-center gap-4 mt-2">
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {overviews.map((overview) => (
@@ -25,10 +25,10 @@ export default function Overview() {
 const overviews = [
   {
     title: "Status",
-    value: "Deployed",
+    value: "On Development",
   },
   {
     title: "Timeline",
-    value: "Jul 2024 - Sep 2024",
+    value: "Oct 2024 - Ongoing Development",
   },
 ];

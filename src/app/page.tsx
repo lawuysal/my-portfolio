@@ -10,8 +10,8 @@ export default function Home() {
       >
         <section id="about" className="flex flex-col items-center mt-48 ">
           <header className="flex flex-col gap-7 md:gap-5">
-            <h1 className="text-6xl font-bold">Hi, I&apos;m Oğuzhan Uysal</h1>
-            <h2 className="text-3xl">
+            <h1 className="text-5xl font-bold">Hi, I&apos;m Oğuzhan</h1>
+            <h2 className="text-xl">
               I help people with the software I develop. Especially{" "}
               <span className="underline decoration-primary">
                 web applications
