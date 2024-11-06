@@ -1,12 +1,13 @@
-import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main id="home" className="w-full max-w-[100rem] mx-auto  px-8">
+      <main
+        id="home"
+        className="w-full max-w-[100rem] mx-auto  px-8 flex-grow mb-40"
+      >
         <section id="about" className="flex flex-col items-center mt-48 ">
           <header className="flex flex-col gap-7 md:gap-5">
             <h1 className="text-6xl font-bold">Hi, I&apos;m Oğuzhan Uysal</h1>
@@ -46,16 +47,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        {/*Footer */}
-        <div className="footer mt-52 items-center justify-center flex mb-10">
-          <div></div>
-          <div>
-            <p className="text-muted-foreground text-center">
-              Made with ❤️ by Oğuzhan Uysal
-            </p>
-          </div>
-        </div>
       </main>
     </>
   );

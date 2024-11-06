@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "lawuysal's Portfolio",
@@ -14,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased dark `}
+        className={`antialiased dark min-h-svh flex flex-col w-full`}
         style={{ colorScheme: "dark" }}
         suppressHydrationWarning
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

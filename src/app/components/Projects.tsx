@@ -29,6 +29,8 @@ const projects = [
     imagePath: "/projects/self-dictionary/language_notes.png",
     isDeployed: false,
     deployedLink: undefined,
+    repoUrl: "https://github.com/lawuysal/self-dictionary-client",
+    pagePath: "/projects/self-dictionary",
   },
   {
     title: "Ray's Blog",
@@ -37,10 +39,12 @@ const projects = [
     description:
       "A fullstack blog website with authentication, markdown support, image uploading, tag and category querying, responsive design and dark mode.",
     techStack:
-      "TypeScript, React, ASP .NET Core Web API, React Router, Tanstack Query, TailwindCSS, Entity Framework, Microsoft SQL Server",
+      "TypeScript, React, ASP .NET Core Web API, React Router, Tanstack Query, TailwindCSS, Entity Framework, Microsoft SQL Server, Azure",
     imagePath: "/projects/rays-blog/main_page.png",
     isDeployed: true,
     deployedLink: "https://rays-blog-gold.vercel.app",
+    repoUrl: "https://github.com/lawuysal/music-blog-frontend",
+    pagePath: "/projects/rays-blog",
   },
   {
     title: "The Beat Stop",
@@ -53,5 +57,7 @@ const projects = [
     imagePath: "/projects/beat-stop/main_page.png",
     isDeployed: false,
     deployedLink: undefined,
+    repoUrl: "https://github.com/lawuysal/the-beat-stop",
+    pagePath: "/projects/beat-stop",
   },
 ];

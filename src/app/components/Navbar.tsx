@@ -1,55 +1,66 @@
 "use client";
 
+import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { scrollToSection } from "@/lib/utils";
 
 export default function Navbar() {
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ) => {
-    e.preventDefault();
+  const pathname = usePathname();
+  const [isHomePage, setIsHomePage] = useState(true);
 
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -80;
-      const yPosition =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: yPosition, behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    setIsHomePage(pathname === "/");
+    console.log(pathname);
+  }, [pathname]);
 
   return (
-    <nav className="flex items-center justify-between lg:px-0 px-6 lg:justify-around h-16 mx-auto max-w-[100rem] sticky top-1 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <nav className=" w-full flex items-center justify-between lg:px-0 px-6 lg:justify-around h-16 mx-auto max-w-[100rem] sticky top-1 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       {/* Logo */}
-      <h2 className="text-3xl">@lawuysal</h2>
+      <Link href="/">
+        <h2 className="text-3xl">@lawuysal</h2>
+      </Link>
 
       {/* Navigation */}
       <ul className=" gap-8 hidden lg:flex">
         <li>
-          <a href="#home" onClick={(e) => scrollToSection(e, "home")}>
+          <a
+            href={isHomePage ? "#home" : "/"}
+            onClick={(e) => scrollToSection(e, "home")}
+          >
             Home
           </a>
         </li>
         <li>
-          <a href="#about" onClick={(e) => scrollToSection(e, "about")}>
+          <a
+            href={isHomePage ? "#about" : "/"}
+            onClick={(e) => scrollToSection(e, "about")}
+          >
             About
           </a>
         </li>
         <li>
-          <a
-            href="#tech-stack"
+          <Link
+            href={isHomePage ? "#tech-stack" : "/"}
             onClick={(e) => scrollToSection(e, "tech-stack")}
           >
             Tech Stack
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#projects" onClick={(e) => scrollToSection(e, "projects")}>
+          <a
+            href={isHomePage ? "#projects" : "/"}
+            onClick={(e) => scrollToSection(e, "projects")}
+          >
             Projects
           </a>
         </li>
         <li>
-          <a href="#contact" onClick={(e) => scrollToSection(e, "contact")}>
+          <a
+            href={isHomePage ? "#contact" : "/"}
+            onClick={(e) => scrollToSection(e, "contact")}
+          >
             Contact
           </a>
         </li>

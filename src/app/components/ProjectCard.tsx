@@ -1,5 +1,6 @@
 import { ExternalLink, TextSearch } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 
 type ProjectCardProps = {
@@ -11,6 +12,8 @@ type ProjectCardProps = {
   endDate: string;
   isDeployed: boolean;
   deployedLink?: string;
+  repoUrl: string;
+  pagePath: string;
 };
 
 export default function ProjectCard({
@@ -22,6 +25,8 @@ export default function ProjectCard({
   endDate,
   isDeployed,
   deployedLink,
+  repoUrl,
+  pagePath,
 }: ProjectCardProps) {
   return (
     <div className="bg-primary/10 border rounded-3xl grid grid-rows-[3fr_5fr_1fr] max-w-[350px] relative  ">
@@ -58,17 +63,25 @@ export default function ProjectCard({
 
       {/* Footer */}
       <div className="p-4 grid grid-cols-[5fr_1fr_5fr] items-center justify-center place-items-center bottom-0 absolute w-full rounded-b-3xl">
-        <div className="flex items-center justify-center gap-2 cursor-pointer h-8">
+        <Link
+          href={pagePath}
+          className="flex items-center justify-center gap-2 cursor-pointer h-8"
+        >
           <TextSearch className="size-6" />
           <p>Details</p>
-        </div>
+        </Link>
 
         <div className="border-r h-8"></div>
 
-        <div className="flex items-center justify-center gap-2 cursor-pointer h-8">
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center text-foreground hover:text-foreground/85 justify-center gap-2 cursor-pointer h-8"
+        >
           <FaGithub className="size-6" />
           <p>Code</p>
-        </div>
+        </a>
       </div>
     </div>
   );
@@ -89,7 +102,7 @@ function RenderTitle({
         <a href={deployedLink} target="_blank" rel="noopener noreferrer">
           <div
             className={`flex items-center gap-2 ${
-              isDeployed ? "underline cursor-pointer" : ""
+              isDeployed ? "underline cursor-pointer hover:text" : ""
             }`}
           >
             <p className={`text-2xl font-semibold  `}>{title}</p>
