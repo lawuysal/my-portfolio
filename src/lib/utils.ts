@@ -13,9 +13,12 @@ export const scrollToSection = (
 
   const element = document.getElementById(id);
   if (element) {
-    const yOffset = -80;
+    const yOffset = -80; // Adjust as needed for your navbar height
     const yPosition =
       element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
     window.scrollTo({ top: yPosition, behavior: "smooth" });
+  } else {
+    console.warn(`Element with ID '${id}' not found.`);
   }
 };

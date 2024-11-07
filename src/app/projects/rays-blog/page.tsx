@@ -6,6 +6,13 @@ import Screenshots from "./components/Screenshots";
 import Title from "./components/Title";
 import Overview from "./components/Overview";
 import TechStack from "./components/TechStack";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ray's Blog | lawuysal's Portfolio",
+  description:
+    "Ray's Blog is a dynamic individual blog website developed during my internship at Entegre Yazılım. Created for the music producer and mixing engineer Ray Maschine, the website is designed to be a personal blog where Ray can share his thoughts, experiences, and knowledge with his followers.",
+};
 
 export default function page() {
   return (

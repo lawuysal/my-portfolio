@@ -5,6 +5,13 @@ import Screenshots from "./components/Screenshots";
 import Title from "./components/Title";
 import Overview from "./components/Overview";
 import TechStack from "./components/TechStack";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Beat Stop | lawuysal's Portfolio",
+  description:
+    "This project aims to connect artists and music producers, ensuring that individuals can securely meet their instrumental needs.",
+};
 
 export default function page() {
   return (

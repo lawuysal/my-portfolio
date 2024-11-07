@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "lawuysal's Portfolio",
-  description: "Oğuzhan Uysal's (aka lawuysal) portfolio website.",
+  description: "Web developer Oğuzhan Uysal's portfolio website.",
 };
 
 export default function RootLayout({

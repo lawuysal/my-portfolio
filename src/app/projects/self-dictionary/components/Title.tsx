@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Title() {
   return (
-    <section className="text-center items-center justify-center flex flex-col gap-6 md:gap-8 px-4">
+    <section className="text-center items-center justify-center flex flex-col gap-6 md:gap-8 px-4 relative">
       <div className="flex items-center justify-center gap-4 ">
         <h1 className="text-4xl md:text-6xl font-bold">Self Dictionary</h1>
       </div>
