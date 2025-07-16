@@ -26,9 +26,9 @@ const projects = [
       "A web platform for language learners to connect, take customizable language notes, and practice through mini-games. It also includes social feeds and forums for interaction.",
     techStack:
       "TypeScript, React, Nodejs, Express, React Router, Tanstack Query, TailwindCSS, Prisma, PostgreSQL",
-    imagePath: "/projects/self-dictionary/language_notes.png",
-    isDeployed: false,
-    deployedLink: undefined,
+    imagePath: "/projects/self-dictionary/language-notes-page.png",
+    isDeployed: true,
+    deployedLink: "https://selfdictionary.com/",
     repoUrl: "https://github.com/lawuysal/self-dictionary-client",
     pagePath: "/projects/self-dictionary",
   },
